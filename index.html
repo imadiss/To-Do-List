@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <h1>To-Do List</h1>
+    <div id="error"></div>
+    <div id="principal">
+        <div class="container">
+            <input type="text" id="input" placeholder="Write a Task . . .">
+            <div class="buttons">
+                <button id="add">Add Task</button>
+                <button id="clear">CLear All Tasks</button>
+            </div>
+        </div>
+        <div id="no_tasks">No Tasks Added.</div>
+    </div>
+    <div id="confirmation">
+        <p id="conf_msg">Are you sure you want to delete this task?</p>
+        <div class="buttons">
+            <button id="no">No</button>
+            <button id="yes">Yes</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

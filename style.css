@@ -1,0 +1,247 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+@keyframes Slide-In{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #290f37;
+    animation: Slide-In 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    color: #782da1;
+    font-family: Monospace;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input{
+    color: #782da1;
+    border-radius: 5px;
+    height: 7vw;
+    width: 20vw;
+    background-color: #37134a;
+    border: none;
+    font-family: Monospace;
+    font-size: 1vw;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: center;
+}
+
+#input::placeholder{
+    color: #782da1;
+    font-family: Monospace;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+}
+
+#error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#add , #clear , #yes , #no{
+    border: none;
+    min-height: 2vw;
+    min-width: 7vw;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Monospace;
+    background-color: #37134a;
+    color: #782da1;
+    font-size: 1vw;
+    margin-left: 1vw;
+}
+
+#add:active , #clear:active , #yes:active , #no:active{
+    transform: scale(1.01);
+}
+
+
+.task{
+    font-size: 1vw;
+    color: #782da1;
+    font-family: Monospace;
+    background-color: #37134a;
+    width: 27vw;
+    margin-top: 2vw;
+    padding-left: 1vw ;
+    padding-top: 1vw ;
+    padding-bottom: 1vw ;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.img{
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: auto;
+    padding-right: 0.5vw;
+    cursor: pointer;
+}
+
+#no_tasks{
+    font-size: 1vw;
+    color: #782da1;
+    text-align: center;
+    font-family: Monospace;
+    margin-top: 2vw;
+}
+
+
+
+#confirmation{
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    height: 10vw;
+    animation: Slide-In 1s;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+}
+
+
+#confirmation p{
+    font-size: 1vw;
+    color: #782da1;
+    text-align: center;
+    font-family: Monospace;
+}
+
+#error{
+    color:red;
+    font-family:Monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+
+@media screen and (max-width: 480px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    #input{
+        height: 20vw;
+        width: 50vw;
+        font-size: 3vw;
+        padding-left: 1vw;
+        margin-top: 10px;
+    }
+
+    #add{
+        min-height: 5vw;
+        width: 20vw;
+        font-size: 3vw;
+    }
+
+    .task{
+        font-size: 3vw;
+        width: 60vw;
+        margin-top: 8vw;
+        padding-left: 1vw ;
+        padding-top: 1vw ;
+        padding-bottom: 1vw ;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .img{
+        width: 3.5vw;
+        height: 3.5vw;
+        margin-left: auto;
+        padding-right: 0.5vw;
+        cursor: pointer;
+    }
+
+    #no_tasks{
+        font-size: 3vw;
+        color: #782da1;
+        text-align: center;
+        font-family: Monospace;
+    }
+
+    #confirmation{
+        height: 15vw;
+    }
+
+    #confirmation p{
+        font-size: 3vw;
+        color: #782da1;
+        text-align: center;
+        font-family: Monospace;
+    }
+
+    #add , #clear , #yes , #no{
+        border: none;
+        min-height: 2vw;
+        min-width: 9vw;
+        cursor: pointer;
+        border-radius: 5px;
+        font-family: Monospace;
+        background-color: #37134a;
+        color: #782da1;
+        font-size: 3vw;
+        margin-left: 1vw;
+    }
+
+    #error{
+        margin-bottom: 1vw;
+        font-size: 3vw;
+    }
+    
+}
