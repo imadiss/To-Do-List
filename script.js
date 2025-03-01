@@ -146,6 +146,13 @@ window.onload=function () {
 };
 
 
-// no tasks msg handling
-// add clear all btn
-//storage
+
+document.addEventListener("keydown", function (event){
+    if(event.key=="F12" || (event.ctrlKey && event.shiftKey && event.key.toLowerCase()=="i")){
+        event.preventDefault();
+    }
+})
+
+document.addEventListener("contextmenu",function (event){
+    event.preventDefault();
+})
